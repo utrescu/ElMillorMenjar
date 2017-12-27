@@ -1,0 +1,11 @@
+Button {
+    margin-left: 16;
+    margin-right: 16;
+    margin-bottom: 10;
+}
+
+.submit-button {
+    background-color: #CB1D00;
+    color: white;
+    margin-top: 20;
+}

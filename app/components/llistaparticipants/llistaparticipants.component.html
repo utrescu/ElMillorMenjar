@@ -1,0 +1,30 @@
+<ActionBar title="Participants" icon="" class="action-bar">
+</ActionBar>
+<RadSideDrawer #drawerComponent tkToogleNavButton showOverNavigation="true" >
+    <ScrollView tkDrawerContent class="sidedrawer-left">
+        <StackLayout horizontalAlign="left">
+            <drawer-content></drawer-content>
+        </StackLayout>
+    </ScrollView>
+    <StackLayout tkMainContent class="page">
+        <ListView [items]="participants" *ngIf="participants" class="list-group">
+            <ng-template let-participant="item" >
+            <StackLayout orientation="horizontal" class="list-group-item"
+                        [nsRouterLink]="['/participant', participant.id]">
+                <Image row="0" col="0"rowSpan="2" height="108" width="108" [src]="BaseURL + participant.image" class="thumb p-16"></Image>
+                <GridLayout class="list-group-item" rows="auto *" columns="*">
+                    <Label row="0", col="0" class="list-group-item-heading"
+                            [text]="participant.name"></Label>
+                    <Label row="1", col="0" class="list-group-item-text"
+                            [text]="participant.description"></Label>
+                </GridLayout>
+                <Label orientation="horizontal" class="list-group-item">
+
+                </Label>
+            </StackLayout>
+            </ng-template>
+        </ListView>
+        <ActivityIndicator busy="true"  *ngIf="!(participant || errMess)" width="50" height="50" class="activity-indicator"></ActivityIndicator>
+        <Label *ngIf="errMess" [text]="'Error: ' + errMess"></Label>
+    </StackLayout>
+</RadSideDrawer>

@@ -1,0 +1,11 @@
+.posicio {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.vots {
+    float: right;
+    color: red;
+    text-align: right;
+}

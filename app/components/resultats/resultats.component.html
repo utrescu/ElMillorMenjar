@@ -1,0 +1,16 @@
+<ActionBar title="Resultats" class="action-bar">
+    <NavigationButton android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+<StackLayout >
+    <ListView [items]="classificacio" class="list-group" *ngIf="classificacio">
+        <ng-template let-item="item" let-i="index" >
+          <StackLayout orientation="horizontal">
+            <Label [text]="i + 1" class="list-group-item posicio" width="15%"></Label>
+            <Label [text]="item.name" class="list-group-item" width="60%"></Label>
+            <Label [text]="0" class="list-group-item vots" width="25%"></Label>
+          </StackLayout>
+        </ng-template>
+    </ListView>
+</StackLayout>
+<ActivityIndicator busy="true" *ngIf="!(classificacio || errMess)" width="50" height="50" class="activity-indicator"></ActivityIndicator>
+<Label *ngIf="errMess" [text]="'Error: ' + errMess"></Label>
