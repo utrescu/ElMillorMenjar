@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core'
 import { Participant } from "../../shared/participant";
 import { Comment } from "../../shared/comments";
-import { ParticipantsService } from '../../services/participants.service'
+import { ParticipantService } from '../../services/participant.service'
 import { ERROR_COMPONENT_TYPE } from '@angular/core/src/errors';
 import { ActivatedRoute, Params } from '@angular/router';
 import { RouterExtensions } from 'nativescript-angular/router';
@@ -20,7 +20,7 @@ export class ParticipantComponent implements OnInit {
     errMess: string;
 
     constructor(
-        private serveiParticipants: ParticipantsService,
+        private serveiParticipants: ParticipantService,
         private route: ActivatedRoute,
         private routerExtensions: RouterExtensions,
         @Inject('BaseURL') private BaseURL) {
@@ -41,5 +41,13 @@ export class ParticipantComponent implements OnInit {
 
           votar(): void {
               console.log("Voto " + this.participant.id + " " + this.participant.name);
+              this.serveiParticipants.votaParticipant(this.participant).subscribe(
+                  result =>  {
+                      this.participant = result;
+                      // Redirigir?
+                      this.routerExtensions.navigate(["/resultats"], { clearHistory: false })
+                  },
+                  errmess => { this.participant = null; this.errMess = <any>errmess; }
+              )
           }
 }

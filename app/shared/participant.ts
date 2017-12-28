@@ -6,4 +6,5 @@ export interface Participant {
     image: string;
     description: string;
     comments: Comment[];
+    vots: number;
 }

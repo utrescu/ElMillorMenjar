@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core'
 import { Participant } from "../../shared/participant";
-import { ParticipantsService } from '../../services/participants.service'
+import { ParticipantService } from '../../services/participant.service'
 import { RouterExtensions } from 'nativescript-angular/router';
 import { ERROR_COMPONENT_TYPE } from '@angular/core/src/errors';
 import 'rxjs/add/operator/switchMap';
@@ -18,14 +18,14 @@ export class ResultatsComponent implements OnInit{
   errMess: string;
 
   constructor(
-    private serveiParticipants: ParticipantsService,
+    private serveiParticipants: ParticipantService,
     private routerExtensions: RouterExtensions,
     @Inject('BaseURL') private BaseURL) {
 
     }
 
     ngOnInit() {
-      this.serveiParticipants.getParticipants()
+      this.serveiParticipants.getParticipantsOrderByVots()
         .subscribe( participants => this.classificacio = participants,
                     errmess => this.errMess = <any>errmess);
     }

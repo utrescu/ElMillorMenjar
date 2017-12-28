@@ -1,14 +1,14 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
-import { NativeScriptHttpModule } from "nativescript-angular/http";
+import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 
 import { NativeScriptUISideDrawerModule } from 'nativescript-telerik-ui/sidedrawer/angular'
 
 import { AppRoutingModule } from "./app.routing";
 import { AppComponent } from "./app.component";
 
-import { ParticipantsService } from './services/participants.service'
-import { processaResposta } from './services/processaresposta.service'
+import { ParticipantService } from './services/participant.service'
+import { ErrorInterceptorProvider } from './services/error.interceptor';
 
 import { LlistaParticipantsComponent } from "./components/llistaparticipants/llistaparticipants.component";
 import { ParticipantComponent } from "./components/participant/participant.component";
@@ -17,11 +17,6 @@ import { ResultatsComponent } from "./components/resultats/resultats.component";
 import { DrawerComponent } from "./shared/drawer/drawer.component";
 
 import { baseURL } from './shared/baseurl'
-// Uncomment and add to NgModule imports if you need to use two-way binding
-// import { NativeScriptFormsModule } from "nativescript-angular/forms";
-
-// Uncomment and add to NgModule imports  if you need to use the HTTP wrapper
-// import { NativeScriptHttpModule } from "nativescript-angular/http";
 
 @NgModule({
     bootstrap: [
@@ -30,7 +25,7 @@ import { baseURL } from './shared/baseurl'
     imports: [
         NativeScriptModule,
         AppRoutingModule,
-        NativeScriptHttpModule,
+        NativeScriptHttpClientModule,
         NativeScriptUISideDrawerModule
     ],
     declarations: [
@@ -42,8 +37,8 @@ import { baseURL } from './shared/baseurl'
     ],
     providers: [
         {provide: 'BaseURL', useValue: baseURL},
-        ParticipantsService,
-        processaResposta,
+        ParticipantService,
+        ErrorInterceptorProvider,
     ],
     schemas: [
         NO_ERRORS_SCHEMA

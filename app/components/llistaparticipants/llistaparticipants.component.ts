@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, ChangeDetectorRef } from '@angular/core'
 import { Participant } from "../../shared/participant";
-import { ParticipantsService } from '../../services/participants.service'
+import { ParticipantService } from '../../services/participant.service'
 import { ERROR_COMPONENT_TYPE } from '@angular/core/src/errors';
 import { DrawerPage } from '../../shared/drawer/drawer.page';
 
@@ -15,7 +15,7 @@ export class LlistaParticipantsComponent extends DrawerPage implements OnInit {
     errMess: string;
 
     constructor(
-        private serveiParticipants: ParticipantsService,
+        private serveiParticipants: ParticipantService,
         private changeDetectorRef:ChangeDetectorRef,
         @Inject('BaseURL') private BaseURL) {
             super(changeDetectorRef)
