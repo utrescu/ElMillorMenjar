@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Participant } from '../shared/participant'
 import { Observable } from 'rxjs/Observable';
 import {Http, Response} from '@angular/http'
-import { HttpClient, HttpHeaders, HttpResponse } from "@angular/common/http";
 import { baseURL } from '../shared/baseurl'
 import { processaResposta } from "./processaresposta.service";
 import 'rxjs/add/operator/map';
