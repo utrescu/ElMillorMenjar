@@ -44,7 +44,7 @@ export class ParticipantComponent implements OnInit {
               this.serveiParticipants.votaParticipant(this.participant).subscribe(
                   result =>  {
                       this.participant = result;
-                      // Redirigir?
+                      // Redirigir a resultats ...
                       this.routerExtensions.navigate(["/resultats"], { clearHistory: false })
                   },
                   errmess => { this.participant = null; this.errMess = <any>errmess; }
