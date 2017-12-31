@@ -10,3 +10,7 @@ platforms/
 tmp/
 typings/
 report/
+.vscode/
+api-server/
+package-lock.json
+*~

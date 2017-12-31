@@ -22,9 +22,15 @@ export class LlistaParticipantsComponent extends DrawerPage implements OnInit {
         }
 
     ngOnInit() {
-        this.serveiParticipants.getParticipants()
-        .subscribe( participants => this.participants = participants,
-                    errmess => this.errMess = <any>errmess);
+        // Fent servir la interfície REST
+        // this.serveiParticipants.getParticipants()
+        //  .subscribe( participants => this.participants = participants,
+        //             errmess => this.errMess = <any>errmess);
+
+        // Fent servir el plugin ...
+        this.serveiParticipants.getParticipants2()
+           .then(participants => this.participants = participants)
+           .catch(errmess => this.errMess = <any>errmess);
     }
 
 }

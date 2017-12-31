@@ -25,7 +25,7 @@ export class ResultatsComponent implements OnInit{
     }
 
     ngOnInit() {
-      this.serveiParticipants.getParticipantsOrderByVots()
+      this.serveiParticipants.getParticipants()
         .subscribe( participants => this.classificacio = participants,
                     errmess => this.errMess = <any>errmess);
     }

@@ -2,107 +2,112 @@
   "participants": [
     {
       "id": 0,
-      "name": "Uthapizza",
-      "image": "images/uthappizza.png",
-      "description": "A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.",
+      "name": "Puttapizza",
+      "image": "images/pizza.png",
+      "description": "No penseu malament, no té res a veure amb coses sexuals, simplement és una pizza a la que se li ha afegit tot el que hem trobat per la nevera, els armaris, etc... Bàsicament és una pizza primiscua",
+      "vots": 3,
       "comments": [
         {
           "rating": 5,
-          "comment": "Imagine all the eatables, living in conFusion!",
-          "author": "John Lemon",
+          "comment": "Imagine all the pizzas..., Ah!",
+          "author": "Joan Lemon",
           "date": "2012-10-16T17:57:28.556094Z"
         },
         {
           "rating": 4,
-          "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
-          "author": "Paul McVites",
+          "comment": "Mai, no havia menjat pizza amb gust de sorra!",
+          "author": "Pep Pites",
           "date": "2014-09-05T17:57:28.556094Z"
         },
         {
           "rating": 3,
-          "comment": "Eat it, just eat it!",
-          "author": "Michael Jaikishan",
+          "comment": "No puc parlar ... tinc la boca plena",
+          "author": "Frederic Garcia",
           "date": "2015-02-13T17:57:28.556094Z"
         },
         {
           "rating": 4,
-          "comment": "Ultimate, Reaching for the stars!",
-          "author": "Ringo Starry",
+          "comment": "Bestial!",
+          "author": "Marcel Estarriol",
           "date": "2013-12-02T17:57:28.556094Z"
         },
         {
           "rating": 2,
-          "comment": "It's your birthday, we're gonna party!",
-          "author": "25 Cent",
+          "comment": "Això és una pizza?",
+          "author": "Filomeno Pi",
           "date": "2011-12-02T17:57:28.556094Z"
         }
       ]
     },
     {
       "id": 1,
-      "name": "Glaçons de gel",
-      "image": "images/zucchipakoda.png",
-      "description": "Glaçons de gel tallats a mà importats directament des de Finlàndia. Els glaçons que fa servir la jet set..",
+      "name": "Pa ecològic d'espelta i cola blanca",
+      "image": "images/pa.png",
+      "description": "Anem un pas més enllà amb el menjar ecològic, ara a més de fer el pa amb farina d'espelta, hi posem cola blanca perquè mantingui la seva forma durant més temps! I si no ens l'acabem el podem fer servir per falcar portes, per clavar claus, ... per qualsevol cosa que us interessi!",
+      "vots": 2,
       "comments": [
         {
           "rating": 3,
-          "comment": "Eat it, just eat it!",
-          "author": "Michael Jaikishan",
+          "comment": "Genials!",
+          "author": "Joan Freixenet",
           "date": "2015-02-13T17:57:28.556094Z"
         },
         {
           "rating": 4,
-          "comment": "Ultimate, Reaching for the stars!",
-          "author": "Ringo Starry",
+          "comment": "Son com els altres però pots fer-te el xulo! I es guarden molt!",
+          "author": "Marcel Estarriol",
           "date": "2013-12-02T17:57:28.556094Z"
         },
         {
           "rating": 2,
-          "comment": "It's your birthday, we're gonna party!",
-          "author": "25 Cent",
+          "comment": "For beautiful people!",
+          "author": "Filomeno Pi",
           "date": "2011-12-02T17:57:28.556094Z"
         }
       ]
     },
     {
       "id": 2,
-      "name": "Vadonut",
-      "image": "images/vadonut.png",
-      "description": "Donuts de colors (són tan bons que quan vam fer la foto només en teníem d'un",
+      "name": "Melmelada sorpresa",
+      "image": "images/melmeladax.png",
+      "description": "Fuig de les melmelades de fruites, sigues modern i aconsegeuix la melmelada més ecològica que s'ha fet mai. Feta de restes de fruites diverses i a més en cada pot pots trobar fruites diferents, o sigui, gustos diferents!",
+      "vots": 4,
       "comments": [
         {
           "rating": 4,
-          "comment": "Impressionants! Necessites un martell per menjar-te'ls però són fantàstics",
-          "author": "Ringo Starry",
+          "comment": "Impressionant! Necessites un martell per menjar-ne però és menjar de déus",
+          "author": "Manel Ferriol",
           "date": "2013-12-02T17:57:28.556094Z"
         },
         {
           "rating": 5,
           "comment": "Quasi em moro, però valia la pena",
-          "author": "25 Cent",
+          "author": "Mistic Buda",
           "date": "2011-12-02T17:57:28.556094Z"
         }
       ]
     },
     {
       "id": 3,
-      "name": "Protecció Don Maleone",
-      "image": "images/elaicheesecake.png",
-      "description": "Tens un negoci? Vols que t'extorsionin? Nosaltres ho fem i impedim que t'ho facin els altres. La seguretat de ser extorsionat per professionals",
+      "name": "Llangardaix poc fet",
+      "image": "images/llangardaix.png",
+      "description": "Quina és la carn més ecològica que es pot trobar avui en dia? Un animal que no creix en granjes i per tant no menja gens de pinso (o heu vist pinso per llangardaixos al super?). Llangardaix poc fet, només volta i volta, per trobar el regust dels insectes que es va menjar en vida. Un plaer pels sentits",
+      "vots": 6,
       "comments": [
         {
           "rating": 2,
-          "comment": "Un dia no vaig pagar i em van tallar un dit! Són uns professionals",
-          "author": "25 Cent",
+          "comment": "Un dia el vaig provar i ara m'he tornat vegetarià",
+          "author": "Mistic buda",
           "date": "2011-12-02T17:57:28.556094Z"
         }
       ]
     },
     {
       "id": 4,
-      "name": "Triturats Benito",
+      "name": "Buffet matemàtic Benito",
       "image": "images/buffet.png",
-      "description": "Es venen coses triturades de diferents colors. Per alimentar l'esperit cromàtic dels compradors.",
+      "description": "Es composa de formes matemàtiques de diferents colors. Per alimentar l'esperit cromàtic dels compradors i a més fomentar la ciència!",
+      "vots": 6,
       "comments": []
     }
   ]

@@ -22,6 +22,7 @@ export class ErrorInterceptor implements HttpInterceptor {
                 } else {
                     errMsg = errorReponse.message ? errorReponse.message : errorReponse.toString();
                 }
+                console.log(errMsg);
                 return _throw(errMsg);
             });
     }

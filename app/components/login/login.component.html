@@ -1,0 +1,14 @@
+<StackLayout>
+    <Image src="~/images/logo.png"></Image>
+    <TextField hint="Correu electrònic" keyboardType="email"
+      autocorrect="false" autocapitalizationType="none"
+      [(ngModel)]="usuari.email" >
+    </TextField>
+    <TextField hint="Contrasenya" secure="true"
+    [(ngModel)]="usuari.password">
+    </TextField>
+
+    <Button [text]="isLoggingIn ? 'Entrar' : 'Registrar-se'" class="submit-button" (tap)="submit()">
+    </Button>
+    <Button [text]="isLoggingIn ? 'Registrar-se' : 'Tornar enrere'" (tap)="toggleDisplay()"></Button>
+</StackLayout>

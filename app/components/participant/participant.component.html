@@ -1,13 +1,13 @@
-<ActionBar title="Participant" class="action-bar">
+<ActionBar title="Plat" class="action-bar">
     <NavigationButton android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
 </ActionBar>
 <ScrollView orientation="vertical">
 
         <GridLayout class="m-5" rows="auto auto auto" *ngIf="participant">
             <StackLayout row="0" class="p-10 border">
-                <Image [src]="BaseURL + participant.image"></Image>
+                <Image [src]="participant.image"></Image>
                 <StackLayout>
-                    <Label class="h2" [text]="participant.name"></Label>
+                    <Label class="h2" [text]="participant.name" ></Label>
                     <Label class="body" [text]="participant.description" textWrap="true"></Label>
                     <Button text="Votar-lo" class="submit-button" (tap)="votar()"></Button>
                 </StackLayout>

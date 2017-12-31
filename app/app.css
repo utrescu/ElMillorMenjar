@@ -22,15 +22,15 @@ refer to http://docs.nativescript.org/ui/theme.
 }
 
 .sidedrawer-left {
-    background-color: #D1C4E9;
+    background-color: rgb(255, 255, 255);
 }
 
 .sidedrawer-left .sidedrawer-header {
-    background-color: #512DA8;
+    background-color: rgb(20, 11, 41);
 }
 
 .sidedrawer-left .sidedrawer-header .sidedrawer-header-image {
-    background-color: #512DA8;
+    background-color: rgb(20, 11, 41);
     margin: 10;
 }
 
@@ -47,4 +47,21 @@ refer to http://docs.nativescript.org/ui/theme.
     font-size: 20;
     color: black;
     border-width: 0;
+}
+
+TextField {
+    padding: 10;
+    font-size: 13;
+}
+
+Button, TextField {
+    margin-left: 16;
+    margin-right: 16;
+    margin-bottom: 10;
+}
+
+.submit-button {
+    background-color: #CB1D00;
+    color: white;
+    margin-top: 20;
 }
