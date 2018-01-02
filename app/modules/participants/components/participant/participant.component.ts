@@ -1,11 +1,13 @@
 import { Component, OnInit, OnDestroy, Inject } from '@angular/core'
-import { Participant } from "../../shared/participant";
-import { Comment } from "../../shared/comments";
-import { ParticipantService } from '../../services/participant.service'
 import { ERROR_COMPONENT_TYPE } from '@angular/core/src/errors';
 import { ActivatedRoute, Params } from '@angular/router';
 import { RouterExtensions } from 'nativescript-angular/router';
 import 'rxjs/add/operator/switchMap';
+
+import { Participant } from "../../models/participant";
+import { Comment } from "../../models/comments";
+import { ParticipantService } from '../../serveis'
+import { LogService } from '../../../core/serveis/log.service';
 
 @Component( {
     selector: 'app-participant',
@@ -24,6 +26,7 @@ export class ParticipantComponent implements OnInit {
 
     constructor(
         private serveiParticipants: ParticipantService,
+        private logService: LogService,
         private route: ActivatedRoute,
         private routerExtensions: RouterExtensions,
         @Inject('BaseURL') private BaseURL) {
@@ -39,7 +42,7 @@ export class ParticipantComponent implements OnInit {
         }
 
         ngOnInit() {
-            // ---> Fent servir la interfície REST ... 
+            // ---> Fent servir la interfície REST ...
             // this.route.params
             //   .switchMap((params: Params) => this.serveiParticipants.getParticipant(+params['id']))
             //   .subscribe(participant => this.participant = participant,
@@ -52,7 +55,9 @@ export class ParticipantComponent implements OnInit {
                 .then(participant => {
                     this.participant = participant;
                 })
-                .catch(errmess => { this.participant = null; this.errMess = <any>errmess; })
+                .catch(errmess => {
+                    this.participant = null; this.errMess = <any>errmess;
+                })
             })
           }
 
@@ -66,7 +71,10 @@ export class ParticipantComponent implements OnInit {
           }
 
           votar(): void {
-              console.log("Voto " + this.participant.id + " " + this.participant.name + " -> " + this.participant.vots);
+              this.logService.debug("Voto " + this.participant.id +
+                                  " " + this.participant.name +
+                                  " -> " + this.participant.vots);
+
               this.serveiParticipants.votaParticipant(this.participant);
               this.routerExtensions.navigate(["/resultats"], { clearHistory: false })
           }

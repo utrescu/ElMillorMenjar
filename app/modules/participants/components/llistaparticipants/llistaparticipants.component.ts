@@ -1,8 +1,8 @@
 import { Component, OnInit, Inject, ChangeDetectorRef } from '@angular/core'
-import { Participant } from "../../shared/participant";
-import { ParticipantService } from '../../services/participant.service'
+import { Participant } from "../../models/participant";
+import { ParticipantService } from '../../serveis'
 import { ERROR_COMPONENT_TYPE } from '@angular/core/src/errors';
-import { DrawerPage } from '../../shared/drawer/drawer.page';
+import { DrawerPage } from '../drawer/drawer.page';
 
 @Component( {
     selector: 'app-llista',

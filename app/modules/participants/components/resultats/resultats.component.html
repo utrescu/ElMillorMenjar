@@ -2,7 +2,7 @@
     <NavigationButton android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
 </ActionBar>
 <StackLayout >
-    <ListView [items]="classificacio" class="list-group" *ngIf="classificacio">
+    <ListView [items]="classificacio | ordenaparticipants" class="list-group" *ngIf="classificacio">
         <ng-template let-item="item" let-i="index" >
           <StackLayout orientation="horizontal">
             <Label [text]="i + 1" class="list-group-item posicio" width="15%"></Label>

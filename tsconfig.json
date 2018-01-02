@@ -6,9 +6,10 @@
         "emitDecoratorMetadata": true,
         "noEmitHelpers": true,
         "noEmitOnError": true,
+        "suppressImplicitAnyIndexErrors": true,
         "lib": [
-            "es6",
             "dom",
+            "es6",
             "es2015.iterable"
         ],
         "baseUrl": ".",

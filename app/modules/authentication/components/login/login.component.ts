@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
-import {prompt, alert} from "ui/dialogs";
+import { prompt, alert } from "ui/dialogs";
 
-import { UserService } from '../../services/user.service';
-import { User } from './../../shared/user';
+import { UserService } from '../../serveis';
+import { User } from '../../models/user';
 import { RouterExtensions } from 'nativescript-angular/router';
+import { DialogService } from '../../../core/serveis';
 
 
 @Component({
   selector: 'app-login',
   moduleId: module.id,
   templateUrl: './login.component.html',
-  styleUrls: [ './login.component.css']
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
 
@@ -19,29 +20,30 @@ export class LoginComponent {
 
   constructor(
     private userService: UserService,
+    private dialegs: DialogService,
     private routerExtensions: RouterExtensions,
   ) {
     this.usuari = new User();
-    this.usuari.email = "utrescu@gmail.com";
-    this.usuari.password = "patata";
+    // this.usuari.email = "utrescu@gmail.com";
+    // this.usuari.password = "patata";
   }
 
   submit() {
     if (this.isLoggingIn) {
-        this.login();
-      } else {
-        this.signUp();
-      }
+      this.login();
+    } else {
+      this.signUp();
+    }
   }
 
   login() {
     this.userService.login(this.usuari)
       .then(() => {
         this.isLoggingIn = false;
-        this.routerExtensions.navigate(["/participants"], { clearHistory: true } );
+        this.routerExtensions.navigate(["/participants"], { clearHistory: true });
 
       })
-      .catch((message:any) => {
+      .catch((message: any) => {
         this.isLoggingIn = false;
       })
 
@@ -51,19 +53,14 @@ export class LoginComponent {
     this.userService.register(this.usuari)
       .then(() => {
         this.isLoggingIn = false;
-        alert({
-            title: "Usuari creat",
-            message: "Ja pots entrar en el sistema",
-            okButtonText: "Ok!"
-        })
+        this.dialegs.alert("Usuari creat");
         this.toggleDisplay();
       })
-      .catch((message:any) => {
-        alert(message);
+      .catch((message: any) => {
+        this.dialegs.alert(message);
         this.isLoggingIn = false;
       });
   }
-
 
   forgotPassword() {
     prompt({
@@ -75,17 +72,17 @@ export class LoginComponent {
     }).then((data) => {
       if (data.result) {
         this.userService.resetPassword(data.text.trim())
-          .then((result:any) => {
-            if(result){
+          .then((result: any) => {
+            if (result) {
               alert(result);
             }
-         });
+          });
       }
     });
- }
+  }
 
 
   toggleDisplay() {
-     this.isLoggingIn = !this.isLoggingIn;
+    this.isLoggingIn = !this.isLoggingIn;
   }
 }
