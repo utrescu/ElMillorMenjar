@@ -6,10 +6,10 @@ Provant Nativescript amb Angular4 + Firebase per fer una aplicació mòbil amb J
 La idea és fer un sistema de votació que permeti als usuaris identificats votar quin és el millor plat del món d'una llista 
 que es proporciona a partir de les dades que es troben a Firebase.
 
-Els usuaris s'identifiquen a través d'un correu electrònic i una contrasenya. Es fa servir l'autenticació Firebase per 
-tant abans de poder entrar es poden registrar en el sistema.
+Els usuaris s'identifiquen a través d'un correu electrònic i una contrasenya. Es fa servir l'autenticació Firebase per login/contrasenya.
+* Els usuaris abans de poder entrar es poden registrar en el sistema.
 
-(Pendent de captura)
+![Login](readme/screen4.png)
 
 Un cop identificat l'usuari, el sistema mostra una llista amb els plats disponibles per votar:
 
