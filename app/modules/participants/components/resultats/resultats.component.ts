@@ -1,10 +1,10 @@
 import { Component, OnInit, Inject } from '@angular/core'
-import { Participant } from "../../shared/participant";
-import { ParticipantService } from '../../services/participant.service'
 import { RouterExtensions } from 'nativescript-angular/router';
 import { ERROR_COMPONENT_TYPE } from '@angular/core/src/errors';
 import 'rxjs/add/operator/switchMap';
 
+import { Participant } from "../../models/participant";
+import { ParticipantService } from '../../serveis'
 
 @Component({
   selector: 'app-resultats',

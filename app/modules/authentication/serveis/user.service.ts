@@ -1,10 +1,12 @@
-import { BackendService } from './backend.service';
-import { User, UserProfile } from './../shared/user';
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+// import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import { baseURL } from '../shared/baseurl';
 import 'rxjs/add/observable/fromPromise';
+
+import { BackendService } from "../../core/serveis/backend.service";
+
+import { User } from '../models/user';
+
 
 import firebase = require("nativescript-plugin-firebase");
 
@@ -12,15 +14,15 @@ import firebase = require("nativescript-plugin-firebase");
 @Injectable()
 export class UserService {
 
-    constructor(public http: HttpClient) {
+    constructor() { // public http: HttpClient) {
 
     }
 
-    private createCapsalera() {
-        let headers = new HttpHeaders();
-        headers.append("Content-Type", "application/json");
-        return headers;
-    }
+    // private createCapsalera() {
+    //     let headers = new HttpHeaders();
+    //     headers.append("Content-Type", "application/json");
+    //     return headers;
+    // }
 
     register(user: User) {
         return firebase.createUser({

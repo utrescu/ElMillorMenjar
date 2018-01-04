@@ -2,7 +2,7 @@
 import { platformNativeScriptDynamic } from "nativescript-angular/platform";
 
 import { AppModule } from "./app.module";
-import { BackendService } from "./services/backend.service";
+import { BackendService } from './modules/core/serveis';
 
 import firebase = require('nativescript-plugin-firebase');
 
