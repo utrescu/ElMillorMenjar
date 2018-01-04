@@ -19,11 +19,13 @@ I al clicar a sobre d'una de les opcions se'n veuen les característiques:
 
 ![Característiques](readme/screen1.png)
 
-En aquesta pantalla es pot votar pel plat i serem redirigits a la pantalla amb els resultats:
+En aquesta pantalla es pot votar pel plat i serem redirigits a la pantalla amb els resultats 
+(La captura no és de la darrera versió, però els resultats surten ordenats per vots de gran a petit):
 
 ![Resultats](readme/screen3.png)
 
-En la llista de plats hi ha un menú lateral que ens permet arribar als resultats sense votar:
+En la llista de plats hi ha un menú lateral que ens permet arribar als resultats sense votar 
+(no em feia falta per res, però ja que provem ...):
 
 ![Resultats](readme/screen2.png)
 
