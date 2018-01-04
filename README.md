@@ -3,11 +3,11 @@ Provant Nativescript amb Angular4 + Firebase per fer una aplicació mòbil amb J
 
 ## Sistema de votació
 
-La idea és fer un sistema de votació que permeti als usuaris identificats votar quin és el millor plat del món d'una llista 
-que es proporciona a partir de les dades que es troben a Firebase.
+La idea és fer un sistema de votació que permeti als usuaris identificats votar quin és el millor plat del món d'una llista que se'ls hi proporciona a partir de les dades que es recuperen des de Firebase.
 
-Els usuaris s'identifiquen a través d'un correu electrònic i una contrasenya. Es fa servir l'autenticació Firebase per login/contrasenya.
-* Els usuaris abans de poder entrar es poden registrar en el sistema.
+La identificació dels usuaris s'identifiquen a través d'un correu electrònic i una contrasenya (Per ara no s'envia correu de confirmació però és trivial fer-ho amb Firebase)
+
+* Els usuaris abans de poder entrar si no tenen comptes s'han de registrar en el sistema clicant en la opció "Registrar-se"
 
 ![Login](readme/screen4.png)
 
@@ -15,17 +15,15 @@ Un cop identificat l'usuari, el sistema mostra una llista amb els plats disponib
 
 ![Llista](readme/screen0.png)
 
-I al clicar a sobre d'una de les opcions se'n veuen les característiques: 
+I al clicar a sobre d'una de les opcions se'n veuen les característiques i es pot votar pel plat o tornar enrere a la llista de plats:
 
-![Característiques](readme/screen1.png)
+![Característiques](readme/screen1.png) ![Característiques2](readme/screen5.png)
 
-En aquesta pantalla es pot votar pel plat i serem redirigits a la pantalla amb els resultats 
-(La captura no és de la darrera versió, però els resultats surten ordenats per vots de gran a petit):
+En cas de votar l'usuari és redirigit a la pantalla que mostra els resultats ordenats de gran a petit:
 
 ![Resultats](readme/screen3.png)
 
-En la llista de plats hi ha un menú lateral que ens permet arribar als resultats sense votar 
-(no em feia falta per res, però ja que provem ...):
+Quan s'està en la llista de plats es pot fer aparèixer un menú lateral (com a Twitter) que permet arribar als resultats sense haver de votar (no em feia falta per res, però ja que fem proves ...):
 
 ![Resultats](readme/screen2.png)
 
