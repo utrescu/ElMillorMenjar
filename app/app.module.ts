@@ -26,7 +26,8 @@ import { AuthenticationModule } from './modules/authentication/authentication.mo
         NativeScriptHttpClientModule,
         NativeScriptUISideDrawerModule,
         CoreModule,
-        ParticipantsModule
+        ParticipantsModule,
+        AuthenticationModule
     ],
     declarations: [
         AppComponent,

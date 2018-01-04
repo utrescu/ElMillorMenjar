@@ -1,5 +1,5 @@
 <ActionBar title="Tria el millor menjar del món" icon="" class="action-bar">
-    <ActionItem text="logout"
+    <ActionItem text="logout" (tap)="sortir()"
                 ios.systemIcon="16" ios.position="right"
                 android.position="popup">
     </ActionItem>
@@ -11,7 +11,7 @@
         </StackLayout>
     </ScrollView>
     <StackLayout tkMainContent class="page">
-        <ListView [items]="participants" *ngIf="participants" class="list-group">
+        <ListView [items]="participants" *ngIf="participants" class="list-group p-10">
             <ng-template let-participant="item" >
             <StackLayout orientation="horizontal" class="list-group-item"
                         [nsRouterLink]="['/participant', participant.id]">

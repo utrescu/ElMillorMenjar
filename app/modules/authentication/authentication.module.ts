@@ -11,6 +11,7 @@ import { CoreModule } from '../core/core.module';
 import { AUTHROUTES } from './authentication.routes'
 import { SERVEIS } from './serveis';
 import { LoginComponent } from './components/login/login.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
     imports: [
@@ -24,7 +25,8 @@ import { LoginComponent } from './components/login/login.component';
         ...SERVEIS
     ],
     declarations: [
-        LoginComponent
+        LoginComponent,
+        LogoutComponent
     ]
 })
 export class AuthenticationModule {
