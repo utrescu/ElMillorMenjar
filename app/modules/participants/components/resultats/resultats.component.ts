@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core'
+import { Component, OnInit, OnDestroy, Inject, NgZone } from '@angular/core'
 import { RouterExtensions } from 'nativescript-angular/router';
 import { ERROR_COMPONENT_TYPE } from '@angular/core/src/errors';
 import 'rxjs/add/operator/switchMap';
@@ -20,6 +20,7 @@ export class ResultatsComponent implements OnInit{
   constructor(
     private serveiParticipants: ParticipantService,
     private routerExtensions: RouterExtensions,
+    private ngzone: NgZone,
     @Inject('BaseURL') private BaseURL) {
 
     }
@@ -28,6 +29,28 @@ export class ResultatsComponent implements OnInit{
       this.serveiParticipants.getParticipants()
         .subscribe( participants => this.classificacio = participants,
                     errmess => this.errMess = <any>errmess);
+
+      this.serveiParticipants.startMonitorResultats();
+
+      this.serveiParticipants.rebutCanvi.subscribe(
+        (data) => {
+          this.ngzone.run(() => {
+            console.log("Rebudes dades");
+            this.classificacio = data;
+          })
+        }
+      )
+//          .then( (data) => {
+//            this.ngzone.run(() => {
+//              this.serveiParticipants.getResultats();
+//              console.log('classificacio');
+//            })
+//          });
+    }
+
+    ngOnDestroy() {
+      console.log("Eliminar listener");
+      this.serveiParticipants.stopMonitorResultats();
     }
 
     goBack(): void {

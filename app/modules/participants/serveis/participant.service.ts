@@ -1,5 +1,5 @@
 import { BackendService } from '../../core/serveis';
-import { Injectable, NgZone } from '@angular/core';
+import { Injectable, NgZone, EventEmitter } from '@angular/core';
 import { Participant } from '../models/participant'
 import { Observable } from 'rxjs/Observable';
 import { HttpClient, HttpHeaders, HttpResponse } from "@angular/common/http";
@@ -89,4 +89,27 @@ export class ParticipantService {
             vots
         );
     }
+
+    listeners: any;
+    // @Output()
+    rebutCanvi: EventEmitter <Participant[]> = new EventEmitter();
+
+    // resultats: Participant[];
+    // Monitoritzar les dades de participants
+    startMonitorResultats() {
+        this.rebutCanvi = new EventEmitter();
+        return firebase.addValueEventListener( data => {
+            console.log("Change!");
+            this.rebutCanvi.emit(data.value);
+            // this.resultats = data.value;
+        }, '/participants').then(
+            listeners => this.listeners = listeners
+        )
+    }
+
+    stopMonitorResultats() {
+        firebase.removeEventListeners( this.listeners, '/participants');
+    }
+
+
 }
