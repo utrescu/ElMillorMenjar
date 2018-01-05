@@ -23,8 +23,11 @@ En cas de votar l'usuari és redirigit a la pantalla que mostra els resultats or
 
 ![Resultats](readme/screen3.png)
 
+Els resultats es van actualitzant *en temps real* a mesura que els altres usuaris de l'aplicació van votant: Un usuari pot veure com van evolucionant els resultats simplement mirant aquesta pantalla
+
 Quan s'està en la llista de plats es pot fer aparèixer un menú lateral (com a Twitter) que permet arribar als resultats sense haver de votar (no em feia falta per res, però ja que fem proves ...):
 
 ![Resultats](readme/screen2.png)
+
 
 
