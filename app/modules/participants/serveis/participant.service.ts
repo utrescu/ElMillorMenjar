@@ -91,17 +91,17 @@ export class ParticipantService {
     }
 
     listeners: any;
-    // @Output()
+
     rebutCanvi: EventEmitter <Participant[]> = new EventEmitter();
 
-    // resultats: Participant[];
-    // Monitoritzar les dades de participants
+    // Monitoritzar les dades de participants per poder
+    // tenir un sistema de rebre actualizacions dels resultats
+    // a mesura de que vagin canviant
+    // --------------------------------------------------------
     startMonitorResultats() {
         this.rebutCanvi = new EventEmitter();
         return firebase.addValueEventListener( data => {
-            console.log("Change!");
             this.rebutCanvi.emit(data.value);
-            // this.resultats = data.value;
         }, '/participants').then(
             listeners => this.listeners = listeners
         )

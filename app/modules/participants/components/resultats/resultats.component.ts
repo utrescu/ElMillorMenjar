@@ -26,26 +26,17 @@ export class ResultatsComponent implements OnInit{
     }
 
     ngOnInit() {
-      this.serveiParticipants.getParticipants()
-        .subscribe( participants => this.classificacio = participants,
-                    errmess => this.errMess = <any>errmess);
 
       this.serveiParticipants.startMonitorResultats();
 
       this.serveiParticipants.rebutCanvi.subscribe(
         (data) => {
           this.ngzone.run(() => {
-            console.log("Rebudes dades");
             this.classificacio = data;
           })
-        }
-      )
-//          .then( (data) => {
-//            this.ngzone.run(() => {
-//              this.serveiParticipants.getResultats();
-//              console.log('classificacio');
-//            })
-//          });
+        },
+        (errMess) => this.errMess = <any>errMess
+      );
     }
 
     ngOnDestroy() {
