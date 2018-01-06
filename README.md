@@ -37,5 +37,7 @@ Quan s'està en la llista de plats es pot fer aparèixer un menú lateral (com a
 
 ![Resultats](readme/screen2.png)
 
+O sigui:
 
+![Funcionament](readme/millor.gif)
 
