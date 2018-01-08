@@ -1,11 +1,11 @@
 .posicio {
-    background-color: black;
-    color: white;
-    text-align: center;
+  background-color: black;
+  color: white;
+  text-align: center;
 }
 
 .vots {
-    float: right;
-    color: red;
-    text-align: right;
+  float: right;
+  color: red;
+  text-align: right;
 }

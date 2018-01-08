@@ -1,13 +1,13 @@
 // nativescript
-import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
+import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 // angular
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 
-import { SERVEIS } from './serveis';
+import { SERVEIS } from "./serveis";
 
 @NgModule({
-    imports: [ NativeScriptModule ],
-    providers: [ ...SERVEIS ],
-    schemas: [ NO_ERRORS_SCHEMA ]
+  imports: [NativeScriptModule],
+  providers: [...SERVEIS],
+  schemas: [NO_ERRORS_SCHEMA]
 })
-export class CoreModule { }
+export class CoreModule {}

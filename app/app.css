@@ -9,59 +9,63 @@ In many cases you may want to use the NativeScript core theme instead
 of writing your own CSS rules. For a full list of class names in the theme
 refer to http://docs.nativescript.org/ui/theme.
 */
-@import 'nativescript-theme-core/css/core.light.css';
+@import "nativescript-theme-core/css/core.light.css";
 
 .border {
-    border-width: 1;
-    border-color: #9f9f9f;
-    border-radius: 5;
+  border-width: 1;
+  border-color: #9f9f9f;
+  border-radius: 5;
 }
 
 .no-border {
-    border-width: 0;
+  border-width: 0;
 }
 
 .sidedrawer-left {
-    background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
 
 .sidedrawer-left .sidedrawer-header {
-    background-color: rgb(20, 11, 41);
+  background-color: rgb(20, 11, 41);
 }
 
 .sidedrawer-left .sidedrawer-header .sidedrawer-header-image {
-    background-color: rgb(20, 11, 41);
-    margin: 10;
+  background-color: rgb(20, 11, 41);
+  margin: 10;
 }
 
 .sidedrawer-left .sidedrawer-header .sidedrawer-header-brand {
-    color: #ffffff;
-    font-size: 30;
+  color: #ffffff;
+  font-size: 30;
 }
 
 .sidedrawer-left .sidedrawer-content .sidedrawer-list-item {
-    color: black;
+  color: black;
 }
 
-.sidedrawer-left .sidedrawer-content .sidedrawer-list-item .sidedrawer-list-item-text {
-    font-size: 20;
-    color: black;
-    border-width: 0;
+.sidedrawer-left
+  .sidedrawer-content
+  .sidedrawer-list-item
+  .sidedrawer-list-item-text {
+  font-size: 20;
+  color: black;
+  border-width: 0;
 }
 
 TextField {
-    padding: 10;
-    font-size: 13;
+  padding: 10;
+  font-size: 13;
 }
 
-Button, TextField {
-    margin-left: 16;
-    margin-right: 16;
-    margin-bottom: 10;
+Button,
+TextField {
+  margin-left: 16;
+  margin-right: 16;
+  margin-bottom: 10;
 }
 
 .submit-button {
-    background-color: #CB1D00;
-    color: white;
-    margin-top: 20;
+  background-color: #cb1d00;
+  color: white;
+  margin-top: 20;
 }

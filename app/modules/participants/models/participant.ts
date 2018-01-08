@@ -1,10 +1,10 @@
 import { Comment } from "./comments";
 
 export interface Participant {
-    id: number;
-    name: string;
-    image: string;
-    description: string;
-    comments: Comment[];
-    vots: number;
+  id: number;
+  name: string;
+  image: string;
+  description: string;
+  comments: Comment[];
+  vots: number;
 }
