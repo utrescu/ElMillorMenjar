@@ -41,3 +41,46 @@ O sigui:
 
 ![Funcionament](readme/millor.gif)
 
+## Instal·lació dels requeriments
+
+Per poder-lo usar cal tenir Node instal·lat perqu descarregarà les dependències amb `npm`. Primer s'instal·la Nativescript (si no el teniu):
+
+    npm install -g nativescript
+ 
+Es pot comprovar que ho teniu tot a punt amb:
+
+    tns doctor
+    
+> L'error més habitual és no tenir definit el directori on teniu el SDK d'Android. 
+En Linux (Bash) es defineix a .profile (amb el directori correcte):
+>
+>    export ANDROID_HOME=/home/usuari/Android/SDK
+
+## Executar el programa
+
+Es clona el projecte: 
+ 
+    git clone https://github.com/utrescu/ElMillorMenjar.git
+    cd ElMillorMenjar
+ 
+ Per executar-lo en Android
+ 
+     tns run android
+
+En IOS es semblant (però cal estar en un Mac i tenir XCode)
+
+    tns run ios
+
+## Configurar Firebase 
+
+Per tenir suport d'autenticació i base de dades cal: 
+
+- Crear un compte a [Firebase](https://firebase.google.com/)
+- Crear un projecte i:
+    - Activar autenticació per `email/password`
+    - importar el fitxer `/api-server/db.json` a la base de dades
+    - Penjar les imatges de `/api-server/imatges` a 'Storage'
+- Des del menú principal de la consola s'afegeix una aplicació Android o IOS (o les dues)
+- Després s'ha de descarregar el fitxers de configuració de cada plataforma a la carpeta App_Resources corresponent (només les que calguin):
+    - Android: posar el fitxer `google-services.json` al directori `/app/App_Resources/Android`
+    - IOS: posar el fitxer `GoogleService-Info.plist` al directori `/app/App_Resources/iOS`
